@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17-alpine3.22
+    container_name: tasks_and_memo_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=roomura
+      - POSTGRES_PASSWORD=roomura119
+      - POSTGRES_DB=tasks_and_memo_db
+
+volumes:
+  db-store:

@@ -3,6 +3,7 @@
 .temp/
 .DS_Store
 .claude/settings.local.json
+postgres_data/
 
 # python
 .mypy_cache
