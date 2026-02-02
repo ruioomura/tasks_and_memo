@@ -1,0 +1,19 @@
+# general
+.env
+.temp/
+.DS_Store
+.claude/settings.local.json
+
+# python
+.mypy_cache
+__pycache__
+.pytest_cache
+.coverage
+htmlcov/
+
+.venv
+
+# api-server
+api-server/alembic/versions/*.backup
+api-server/alembic/versions/__pycache__/
+.playwright-mcp/
