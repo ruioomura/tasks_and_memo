@@ -1,0 +1,64 @@
+// プロジェクト設定: PostgreSQLを使用
+Project "tasks_and_memo" {
+  database_type: 'PostgreSQL'
+  Note: 'タスクとメモを管理します'
+}
+
+
+// アカウントテーブル
+// Note: '認証の基本単位となるアカウント情報。'
+Table account {
+  account_id uuid [pk, default: `uuid_generate_v7()`, note: 'アカウントのUUID(v7)']
+  account_name varchar(255) [unique, not null, note: 'ログイン用の任意のアカウント名']
+  password_hash varchar(255) [not null, note: 'パスワードのハッシュ値']
+  
+  // --- 監査情報 ---
+  created_at timestamp [default: `now()`, note: 'アカウント作成日時']
+  created_by uuid [not null, note: '作成者のアカウントID']
+  updated_at timestamp [default: `now()`, note: 'アカウント更新日時']
+  updated_by uuid [not null, note: '更新者のアカウントID']
+}
+
+// パスワード履歴テーブル
+// Note: 'パスワードの履歴を管理する。' 
+Table password_history {
+  password_history_id uuid [pk, default: `uuid_generate_v7()`, note: 'パスワード履歴のUUID(v7)']
+  account_id uuid [外部キー account.account_id, not null, note: 'アカウントのUUID(v7)']
+  password_hash varchar(255) [not null, note: 'パスワードのハッシュ値']
+  created_at timestamp [default: `now()`, note: 'パスワード履歴作成日時']
+  created_by uuid [外部キー account.account_id, not null, note: 'パスワード履歴作成者のアカウントID']
+}
+
+
+// タスクテーブル
+// Note: 'タスク情報を管理する。'
+Table task {
+  task_id uuid [pk, default: `uuid_generate_v7()`, note: 'タスクのUUID(v7)']
+  account_id uuid [外部キー account.account_id, not null, note: 'アカウントのUUID(v7)']
+  title varchar(255) [not null, note: 'タスクのタイトル']
+  description text [note: 'タスクの詳細']
+  due_date timestamp [note: 'タスクの期日']
+  is_completed boolean [default: false, note: 'タスクの完了状態']
+  
+  // --- 監査情報 ---
+  created_at timestamp [default: `now()`, note: 'タスク作成日時']
+  created_by uuid [外部キー account.account_id, not null, note: 'タスク作成者のアカウントID']
+  updated_at timestamp [default: `now()`, note: 'タスク更新日時']
+  updated_by uuid [外部キー account.account_id, not null, note: 'タスク更新者のアカウントID']
+}
+
+// メモテーブル
+// Note: 'メモ情報を管理する。'
+Table memo {
+  memo_id uuid [pk, default: `uuid_generate_v7()`, note: 'メモのUUID(v7)']
+  account_id uuid [外部キー account.account_id, not null, note: 'アカウントのUUID(v7)']
+  title varchar(255) [not null, note: 'メモのタイトル']
+  content text [note: 'メモの内容']
+  
+  // --- 監査情報 ---
+  created_at timestamp [default: `now()`, note: 'メモ作成日時']
+  created_by uuid [外部キー account.account_id, not null, note: 'メモ作成者のアカウントID']
+  updated_at timestamp [default: `now()`, note: 'メモ更新日時']
+  updated_by uuid [外部キー account.account_id, not null, note: 'メモ更新者のアカウントID']
+}
+
