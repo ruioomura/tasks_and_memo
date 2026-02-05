@@ -81,6 +81,38 @@ CRUD の推奨:
 - `list_memos_endpoint`
 - `get_memo_endpoint`
 
+### 3.3 HTTPメソッドの使用ルール
+
+本プロジェクトでは、APIのHTTPメソッドは **GET と POST のみを使用する。**
+
+#### 採用理由
+- 実装と運用をシンプルに保つため  
+- フロントエンド実装の複雑化を防ぐため  
+- 初学者でも理解しやすい設計にするため  
+
+#### 原則
+| 操作 | 使用メソッド |
+|------|--------------|
+| 取得（一覧・詳細） | GET |
+| 作成・更新・削除 | POST |
+
+#### 例
+
+- メモ作成  
+  `POST /api/v1/memos/create`
+
+- メモ更新  
+  `POST /api/v1/memos/update`
+
+- メモ削除  
+  `POST /api/v1/memos/delete`
+
+- メモ一覧  
+  `GET /api/v1/memos`
+
+- メモ詳細  
+  `GET /api/v1/memos/{memo_id}`
+
 ---
 
 ## 4. レイヤー（層）別の役割と命名
