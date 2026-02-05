@@ -1,0 +1,13 @@
+# 依存関係
+node_modules/
+.next/
+dist/
+build/
+
+# 環境変数・秘密情報
+.env
+.env.local
+
+# その他
+package-lock.json
+*.log

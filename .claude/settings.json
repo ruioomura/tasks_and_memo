@@ -1,0 +1,11 @@
+{
+  "language": "japanese",
+  "theme": "dark", 
+  "verbose": false,
+  "autoUpdater": {
+     "enabled": true
+  },
+  "permissions": {
+    "allow": ["Bash(*)"] 
+  }
+}
