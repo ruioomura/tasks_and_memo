@@ -2,7 +2,7 @@
 
 ## memo機能
 ### メモ一覧取得
-`GET /api/v1/memos?limit=20&offset=0`
+`GET /api/v1/getMemos?limit=20&offset=0`
 
 Response:
 ```
@@ -19,19 +19,16 @@ Response:
   "total": 1,
   "limit": 20,
   "offset": 0
-}
-```
 
 
 ### メモ詳細取得
-`GET /api/v1/memos/{memo_id}`
+`GET /api/v1/getMemoDetail/{memo_id}`
 
 Response:
-```
 
 
-### メモ登録
-`POST /api/v1/memos`
+### メモ作成
+`POST /api/v1/createMemo`
 
 Request:
 ```
@@ -54,7 +51,7 @@ Response
 
 
 ### メモ更新
-`POST /api/v1/memos_update/{memo_id}`
+`POST /api/v1/updateMemo/{memo_id}`
 
 Request:
 ```
@@ -66,4 +63,4 @@ Request:
 
 
 ### メモ削除
-`POST /api/v1/memos_delete/{memo_id}`
+`POST /api/v1/deleteMemo/{memo_id}`
