@@ -8,6 +8,3 @@ services:
       - POSTGRES_USER=roomura
       - POSTGRES_PASSWORD=roomura119
       - POSTGRES_DB=tasks_and_memo_db
-
-volumes:
-  db-store:
