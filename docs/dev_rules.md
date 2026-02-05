@@ -67,11 +67,10 @@ CRUD の推奨:
 - バージョンは `/api/v1`
 
 例:
-- `POST /api/v1/memos`
-- `GET /api/v1/memos`
-- `GET /api/v1/memos/{memo_id}`
-- `PATCH /api/v1/memos/{memo_id}`
-- `DELETE /api/v1/memos/{memo_id}`
+- `POST /api/v1/createMemo`
+- `GET /api/v1/getMemos`
+- `POST /api/v1/updateMemo`
+- `POST /api/v1/deleteMemo`
 
 ### 3.2 ルーター関数名
 - URL と対応する動詞を使用
