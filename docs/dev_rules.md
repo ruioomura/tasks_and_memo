@@ -99,19 +99,19 @@ CRUD の推奨:
 #### 例
 
 - メモ作成  
-  `POST /api/v1/memos/create`
+  `POST /api/v1/createMemo`
 
 - メモ更新  
-  `POST /api/v1/memos/update`
+  `POST /api/v1/updateMemo`
 
 - メモ削除  
-  `POST /api/v1/memos/delete`
+  `POST /api/v1/deleteMemo`
 
 - メモ一覧  
-  `GET /api/v1/memos`
+  `GET /api/v1/getMemos`
 
 - メモ詳細  
-  `GET /api/v1/memos/{memo_id}`
+  `GET /api/v1/getMemoDetail`
 
 ---
 
