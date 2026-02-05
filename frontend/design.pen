@@ -1,0 +1,462 @@
+{
+  "version": "2.7",
+  "children": [
+    {
+      "type": "frame",
+      "id": "1ptdG",
+      "x": 0,
+      "y": 0,
+      "name": "Login Page",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#FFFFFF",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Zu3lR",
+          "name": "Left Panel",
+          "width": 720,
+          "height": "fill_container",
+          "fill": [
+            "#2563EB",
+            {
+              "type": "gradient",
+              "gradientType": "radial",
+              "enabled": true,
+              "opacity": 0.6,
+              "rotation": 0,
+              "size": {
+                "width": 0.8,
+                "height": 0.8
+              },
+              "colors": [
+                {
+                  "color": "#3B82F6",
+                  "position": 0
+                },
+                {
+                  "color": "#2563EB00",
+                  "position": 1
+                }
+              ],
+              "center": {
+                "x": 0.2,
+                "y": 0.3
+              }
+            },
+            {
+              "type": "gradient",
+              "gradientType": "radial",
+              "enabled": true,
+              "opacity": 0.5,
+              "rotation": 0,
+              "size": {
+                "width": 0.6,
+                "height": 0.6
+              },
+              "colors": [
+                {
+                  "color": "#1E40AF",
+                  "position": 0
+                },
+                {
+                  "color": "#2563EB00",
+                  "position": 1
+                }
+              ],
+              "center": {
+                "x": 0.8,
+                "y": 0.8
+              }
+            }
+          ],
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 80,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "vC1OB",
+              "name": "logoRow",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GOxm2",
+                  "name": "logoIcon",
+                  "width": 40,
+                  "height": 40,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 10,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "CyTwe",
+                      "name": "logoMark",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "notebook-pen",
+                      "iconFontFamily": "lucide",
+                      "fill": "#2563EB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jaGpZ",
+                  "name": "logoText",
+                  "fill": "#FFFFFF",
+                  "content": "MemoApp",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Yk9oy",
+              "name": "brandTextGroup",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "H9t2p",
+                  "name": "brandHeadline",
+                  "fill": "#FFFFFF",
+                  "content": "Memo",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "tPM3a",
+                  "name": "brandSub",
+                  "fill": "#FFFFFFCC",
+                  "textGrowth": "fixed-width",
+                  "width": 440,
+                  "content": "アイデアやタスクを素早くメモに残して、いつでも見返せるようにしましょう。",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DAxZy",
+          "name": "Right Panel",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "padding": 80,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "DSWMI",
+              "name": "Form Container",
+              "width": 400,
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AAkDe",
+                  "name": "formHeader",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "02QWZ",
+                      "name": "formTitle",
+                      "fill": "#18181B",
+                      "content": "メモを登録",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "600",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Lh7yI",
+                      "name": "formSubtitle",
+                      "fill": "#71717A",
+                      "content": "新しいメモを作成します",
+                      "fontFamily": "Inter",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "haeI7",
+                  "name": "formFields",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BYYj3",
+                      "name": "emailField",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "uX3p9",
+                          "name": "emailLabel",
+                          "fill": "#18181B",
+                          "content": "タイトル",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qIPnd",
+                          "name": "emailInput",
+                          "width": "fill_container",
+                          "height": 48,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1.5,
+                            "fill": "#E4E4E7"
+                          },
+                          "gap": 12,
+                          "padding": [
+                            0,
+                            16
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "z3Ner",
+                              "name": "emailPlaceholder",
+                              "fill": "#A1A1AA",
+                              "content": "メモのタイトルを入力",
+                              "fontFamily": "Inter",
+                              "fontSize": 15
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DyDz2",
+                      "name": "passField",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "U2LkL",
+                          "name": "passLabelRow",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xPbbV",
+                              "name": "passLabel",
+                              "fill": "#18181B",
+                              "content": "カテゴリ",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yZDOu",
+                          "name": "passInput",
+                          "width": "fill_container",
+                          "height": 48,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1.5,
+                            "fill": "#E4E4E7"
+                          },
+                          "gap": 12,
+                          "padding": [
+                            0,
+                            16
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cQzGN",
+                              "name": "passPlaceholder",
+                              "fill": "#A1A1AA",
+                              "content": "カテゴリを選択",
+                              "fontFamily": "Inter",
+                              "fontSize": 15
+                            },
+                            {
+                              "type": "icon_font",
+                              "id": "Lm7YL",
+                              "name": "catIcon",
+                              "width": 18,
+                              "height": 18,
+                              "iconFontName": "chevron-down",
+                              "iconFontFamily": "lucide",
+                              "fill": "#A1A1AA"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nFcqd",
+                      "name": "contentField",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Qzoc5",
+                          "name": "contentLabel",
+                          "fill": "#18181B",
+                          "content": "内容",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IpApZ",
+                          "name": "contentInput",
+                          "width": "fill_container",
+                          "height": 160,
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1.5,
+                            "fill": "#E4E4E7"
+                          },
+                          "layout": "vertical",
+                          "padding": 16,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "creqw",
+                              "name": "contentPlaceholder",
+                              "fill": "#A1A1AA",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "メモの内容を入力してください...",
+                              "lineHeight": 1.6,
+                              "fontFamily": "Inter",
+                              "fontSize": 15
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Iy5C8",
+                  "name": "actionsGroup",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "qw2Jn",
+                      "name": "loginBtn",
+                      "width": "fill_container",
+                      "height": 48,
+                      "fill": "#2563EB",
+                      "cornerRadius": 8,
+                      "gap": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BFDqP",
+                          "name": "loginBtnText",
+                          "fill": "#FFFFFF",
+                          "content": "メモを保存",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon_font",
+                          "id": "Yb2Ld",
+                          "name": "saveIcon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "save",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SQl96",
+                      "name": "cancelBtn",
+                      "width": "fill_container",
+                      "height": 48,
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 1.5,
+                        "fill": "#E4E4E7"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nLlda",
+                          "name": "cancelText",
+                          "fill": "#71717A",
+                          "content": "キャンセル",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
